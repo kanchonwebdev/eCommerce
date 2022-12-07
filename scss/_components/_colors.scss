@@ -1,0 +1,13 @@
+/* use by mixin 
+=============== */
+@mixin primary-color {}
+@mixin secondary-color {}
+
+/* use by class name
+==================== */
+.primary-color{
+    @include primary-color();
+}
+.secondary-color{
+    @include secondary-color();
+}

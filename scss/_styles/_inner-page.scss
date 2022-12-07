@@ -1,0 +1,780 @@
+/* Shop Page Style
+------------------- */
+.product-section {
+    width: 100%;
+    padding: calc(30px + (80 - 30) * ((100vw - 320px) / (1920 - 320))) 5%;
+
+    &.shop {
+        .shop-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            gap: calc(20px + (50 - 20) * ((100vw - 320px) / (1920 - 320)));
+            align-items: flex-start;
+
+            @include max-width-1023 {
+                grid-template-columns: 1fr;
+            }
+
+            .filter-wrapper {
+                display: flex;
+                flex-direction: column;
+                gap: calc(20px + (50 - 20) * ((100vw - 320px) / (1920 - 320)));
+                border: 1px solid #222;
+                padding: calc(20px + (40 - 20) * ((100vw - 320px) / (1920 - 320)));
+
+                .filter-title {
+                    font-size: calc(18px + (28 - 18) * ((100vw - 320px) / (1920 - 320)));
+                    font-weight: 700;
+                    text-transform: uppercase;
+                }
+
+                .filter-block {
+                    .title {
+                        font-size: calc(18px + (24 - 18) * ((100vw - 320px) / (1920 - 320)));
+                        font-weight: 500;
+                        margin-bottom: calc(10px + (15 - 10) * ((100vw - 320px) / (1920 - 320)));
+                    }
+
+                    .block {
+                        margin-bottom: 5px;
+
+                        input {
+                            outline: none;
+                            border: 1px solid #222;
+                        }
+
+                        label {
+                            font-size: calc(16px + (18 - 16) * ((100vw - 320px) / (1920 - 320)));
+                        }
+
+                        input[type="number"],
+                        input[type="submit"],
+                        select {
+                            width: 100%;
+                            border: 1px solid #222;
+                            outline: none;
+                            padding: calc(8px + (12 - 8) * ((100vw - 320px) / (1920 - 320)));
+                            margin-bottom: calc(10px + (20 - 10) * ((100vw - 320px) / (1920 - 320)));
+                            @include primary-font();
+                            font-size: calc(16px + (18 - 16) * ((100vw - 320px) / (1920 - 320)));
+                        }
+
+                        input[type="submit"] {
+                            background: #222;
+                            color: #fff;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+
+            .product-wrapper {
+                grid-template-columns: repeat(3, 1fr);
+                padding-top: 0px;
+
+                @include phone-767 {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+            }
+        }
+    }
+}
+
+/* Inner Header Section Style
+----------------------------- */
+.inner-header-section {
+    width: 100%;
+    height: 70vh;
+    position: relative;
+
+    @include tablet {
+        height: 60vh;
+    }
+
+    @include phone-767 {
+        height: 35vh;
+    }
+
+    .bg-img {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .text-block {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+
+        .title {
+            display: flex;
+            gap: calc(15px + (20 - 15) * ((100vw - 320px) / (1920 - 320)));
+            flex-wrap: wrap;
+            padding: 5%;
+
+            a {
+                color: #fff;
+            }
+        }
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(34, 34, 34, 0.429);
+        z-index: 1;
+    }
+}
+
+/* Cart Page Style
+------------------- */
+.cart-section {
+    width: 100%;
+    padding: calc(30px + (80 - 30) * ((100vw - 320px) / (1920 - 320))) 5%;
+
+    @include max-width-1023 {
+        overflow: auto;
+    }
+
+    .title-block {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        padding-bottom: calc(20px + (40 - 20) * ((100vw - 320px) / (1920 - 320)));
+        border-bottom: 1px solid #222;
+        gap: calc(20px + (40 - 20) * ((100vw - 320px) / (1920 - 320)));
+
+        @include max-width-1023 {
+            grid-template-columns: repeat(5, 200px);
+        }
+
+        .title {
+            font-size: calc(20px + (30 - 20) * ((100vw - 320px) / (1920 - 320)));
+            font-weight: 700;
+        }
+    }
+
+    .cart-block {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        padding-top: calc(20px + (40 - 20) * ((100vw - 320px) / (1920 - 320)));
+        gap: calc(20px + (40 - 20) * ((100vw - 320px) / (1920 - 320)));
+
+        @include max-width-1023 {
+            grid-template-columns: repeat(5, 200px);
+        }
+
+        .text {
+            font-size: calc(16px + (21 - 16) * ((100vw - 320px) / (1920 - 320)));
+            font-weight: 500;
+        }
+
+        .price {
+            font-size: calc(20px + (25 - 20) * ((100vw - 320px) / (1920 - 320)));
+            font-weight: 800;
+        }
+
+        .quantity {
+            input {
+                border: 1px solid #222;
+                outline: none;
+                padding: calc(5px + (10 - 5) * ((100vw - 320px) / (1920 - 320)));
+                font-size: calc(13px + (14 - 13) * ((100vw - 320px) / (1920 - 320)));
+            }
+        }
+
+        .total {
+            font-size: calc(16px + (21 - 16) * ((100vw - 320px) / (1920 - 320)));
+        }
+
+        .btn-block {
+            .btn {
+                cursor: pointer;
+                padding: calc(8px + (10 - 8) * ((100vw - 320px) / (1920 - 320))) calc(10px + (15 - 10) * ((100vw - 320px) / (1920 - 320)));
+                @include primary-font();
+                border: 1px solid #222;
+                outline: none;
+                color: #fff;
+                background: #222;
+                font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1920 - 320)));
+
+                &.btn-black {
+                    background: #fff;
+                    color: #222;
+                }
+            }
+        }
+    }
+}
+
+/* Pay Page Style
+----------------- */
+.pay-section {
+    width: 100%;
+    padding: calc(30px + (80 - 30) * ((100vw - 320px) / (1920 - 320))) 5%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: start;
+    gap: calc(30px + (80 - 30) * ((100vw - 320px) / (1920 - 320)));
+
+    @include max-width-1023 {
+        grid-template-columns: 1fr;
+    }
+
+    .left-col {
+        display: flex;
+        align-items: center;
+        gap: calc(20px + (40 - 20) * ((100vw - 320px) / (1920 - 320)));
+
+        @include phone-767 {
+            flex-direction: column;
+        }
+
+        .form-block {
+            display: flex;
+
+            @include phone-767 {
+                display: flex;
+            }
+
+            input {
+                padding: calc(8px + (13 - 8) * ((100vw - 320px) / (1920 - 320)));
+                @include primary-font();
+                font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (1920 - 320)));
+                border: 1px solid #222;
+
+                @include phone-767 {
+                    text-align: center;
+                }
+            }
+
+            button {
+                padding: calc(8px + (13 - 8) * ((100vw - 320px) / (1920 - 320)));
+                @include primary-font();
+                font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (1920 - 320)));
+                border: 1px solid #222;
+                outline: none;
+                cursor: pointer;
+                background: #222;
+                color: #fff;
+            }
+        }
+
+        .btn-block {
+            margin-left: calc(20px + (30 - 20) * ((100vw - 320px) / (1920 - 320)));
+
+            @include phone-767 {
+                width: 100%;
+                margin-left: 0px;
+            }
+
+            .btn {
+                padding: calc(8px + (13 - 8) * ((100vw - 320px) / (1920 - 320)));
+                @include primary-font();
+                font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (1920 - 320)));
+                border: 1px solid #222;
+                outline: none;
+                cursor: pointer;
+                background: transparent;
+                color: #222;
+
+                @include phone-767 {
+                    width: 100%;
+                    margin-left: 0px;
+                    display: flex;
+                }
+            }
+        }
+    }
+
+    .right-col {
+        .pay-block {
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: calc(15px + (30 - 15) * ((100vw - 320px) / (1920 - 320)));
+
+            .text {
+                font-size: calc(16px + (19 - 16) * ((100vw - 320px) / (1920 - 320)));
+            }
+
+            .price {
+                font-size: calc(18px + (21 - 18) * ((100vw - 320px) / (1920 - 320)));
+                font-weight: 700;
+            }
+
+            &.border-top {
+                border-top: 1px solid #222;
+                padding-top: calc(15px + (30 - 15) * ((100vw - 320px) / (1920 - 320)));
+            }
+
+            .btn {
+                padding: calc(8px + (13 - 8) * ((100vw - 320px) / (1920 - 320)));
+                @include primary-font();
+                font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (1920 - 320)));
+                border: 1px solid #222;
+                outline: none;
+                background: #222;
+                color: #fff;
+                width: 100%;
+                text-align: center;
+            }
+        }
+    }
+}
+
+/* Checkout Section Style
+------------------------- */
+.checout-section {
+    width: 100%;
+    padding: calc(30px + (80 - 30) * ((100vw - 320px) / (1920 - 320))) 5%;
+    display: grid;
+    grid-template-columns: 60% auto;
+    gap: calc(30px + (80 - 30) * ((100vw - 320px) / (1920 - 320)));
+
+    @include max-width-1023 {
+        grid-template-columns: 1fr;
+    }
+
+    .form-section {
+        .title {
+            display: block;
+            @include primary-title();
+            margin-bottom: calc(20px + (40 - 20) * ((100vw - 320px) / (1920 - 320)));
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: calc(20px + (40 - 20) * ((100vw - 320px) / (1920 - 320)));
+
+            @include phone-480 {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .grid {
+            display: block;
+            width: 100%;
+            margin-top: calc(20px + (40 - 20) * ((100vw - 320px) / (1920 - 320)));
+        }
+
+        .input {
+            font-size: calc(16px + (21 - 16) * ((100vw - 320px) / (1920 - 320)));
+            padding: calc(10px + (15 - 10) * ((100vw - 320px) / (1920 - 320)));
+            border: 1px solid #222;
+            outline: none;
+            width: 100%;
+
+            &.btn {
+                background: #222;
+                color: #fff;
+                @include primary-font();
+            }
+        }
+    }
+
+    .checkout-block {
+        .title {
+            display: block;
+            @include primary-title();
+            margin-bottom: calc(20px + (40 - 20) * ((100vw - 320px) / (1920 - 320)));
+        }
+
+        .pay-block {
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: calc(15px + (30 - 15) * ((100vw - 320px) / (1920 - 320)));
+
+            .text {
+                font-size: calc(16px + (19 - 16) * ((100vw - 320px) / (1920 - 320)));
+            }
+
+            .price {
+                font-size: calc(18px + (21 - 18) * ((100vw - 320px) / (1920 - 320)));
+                font-weight: 700;
+            }
+
+            &.border-top {
+                border-top: 1px solid #222;
+                padding-top: calc(15px + (30 - 15) * ((100vw - 320px) / (1920 - 320)));
+            }
+
+            .btn {
+                padding: calc(8px + (13 - 8) * ((100vw - 320px) / (1920 - 320)));
+                @include primary-font();
+                font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (1920 - 320)));
+                border: 1px solid #222;
+                outline: none;
+                background: #222;
+                color: #fff;
+                width: 100%;
+                text-align: center;
+            }
+        }
+    }
+}
+
+.address-section {
+    width: 100%;
+    padding: calc(30px + (80 - 30) * ((100vw - 320px) / (1920 - 320))) 5%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: calc(30px + (80 - 30) * ((100vw - 320px) / (1920 - 320)));
+
+    @include phone-767 {
+        grid-template-columns: 1fr;
+    }
+
+    .map {
+        min-height: calc(200px + (450 - 200) * ((100vw - 320px) / (1920 - 320)));
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .address-block {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: calc(20px + (40 - 20) * ((100vw - 320px) / (1920 - 320)));
+
+        .address {
+            display: flex;
+            align-items: center;
+            gap: calc(10px + (15 - 10) * ((100vw - 320px) / (1920 - 320)));
+
+            .icon {
+                font-size: calc(20px + (40 - 20) * ((100vw - 320px) / (1920 - 320)));
+            }
+
+            .address-wrap,
+            .address-title {
+                font-size: calc(16px + (28 - 16) * ((100vw - 320px) / (1920 - 320)));
+            }
+        }
+    }
+}
+
+/* Order History Section Style
+------------------------------ */
+.order-history-section {
+    width: 100%;
+    padding: calc(30px + (80 - 30) * ((100vw - 320px) / (1920 - 320))) 5%;
+
+    @include phone-767 {
+        overflow: auto;
+    }
+
+    .title-block {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+
+        @include phone-767 {
+            grid-template-columns: repeat(5, 200px);
+        }
+
+        .title {
+            font-size: calc(16px + (23 - 16) * ((100vw - 320px) / (1920 - 320)));
+            font-weight: 600;
+            border-bottom: 1px solid gray;
+            padding-bottom: calc(20px + (30 - 20) * ((100vw - 320px) / (1920 - 320)));
+            margin-bottom: calc(20px + (30 - 20) * ((100vw - 320px) / (1920 - 320)));
+        }
+    }
+
+    .text-block {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+
+        @include phone-767 {
+            grid-template-columns: repeat(5, 200px);
+        }
+
+        .text {
+            font-size: calc(16px + (21 - 16) * ((100vw - 320px) / (1920 - 320)));
+
+            .btn {
+                font-size: calc(16px + (18 - 16) * ((100vw - 320px) / (1920 - 320)));
+                background: #222;
+                color: #fff;
+                padding: calc(10px + (15 - 10) * ((100vw - 320px) / (1920 - 320)));
+                width: 150px;
+                display: block;
+                text-align: center;
+            }
+        }
+    }
+}
+
+.filter-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: calc(30px + (80 - 30) * ((100vw - 320px) / (1920 - 320))) 5%;
+
+}
+
+/* Payment Section Style
+------------------------ */
+.payment-section {
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include tablet {
+        height: 60vh;
+    }
+
+    @include phone-767 {
+        height: 45vh;
+    }
+
+    .btn-block {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: calc(30px + (50 - 30) * ((100vw - 320px) / (1920 - 320)));
+
+
+        .btn {
+            padding: calc(10px + (15 - 10) * ((100vw - 320px) / (1920 - 320)));
+            cursor: pointer;
+            background: #fff;
+            border: 1px solid #222;
+
+            img {
+                width: calc(80px + (100 - 80) * ((100vw - 320px) / (1920 - 320)));
+                height: calc(40px + (60 - 40) * ((100vw - 320px) / (1920 - 320)));
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+/* Thank You Section Style
+-------------------------- */
+.thank-you-section {
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: calc(20px + (60 - 20) * ((100vw - 320px) / (1920 - 320)));
+
+    @include tablet {
+        height: 60vh;
+    }
+
+    @include phone-767 {
+        height: 45vh
+    }
+
+    .title {
+        @include primary-title();
+    }
+
+    .btn {
+        padding: calc(10px + (15 - 10) * ((100vw - 320px) / (1920 - 320))) calc(15px + (25 - 15) * ((100vw - 320px) / (1920 - 320)));
+        display: block;
+        width: fit-content;
+        background: #222;
+        color: #fff;
+        font-size: calc(16px + (21 - 16) * ((100vw - 320px) / (1920 - 320)));
+    }
+}
+
+/* Track Order Section Style
+---------------------------- */
+.filter-blocks {
+    width: 100%;
+    padding: calc(30px + (80 - 30) * ((100vw - 320px) / (1920 - 320))) 5%;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(3, 1fr);
+    gap: calc(30px + (80 - 30) * ((100vw - 320px) / (1920 - 320)));
+
+    @include phone-767 {
+        grid-template-columns: 1fr;
+    }
+
+    .input {
+        padding: calc(10px + (15 - 10) * ((100vw - 320px) / (1920 - 320))) calc(15px + (25 - 15) * ((100vw - 320px) / (1920 - 320)));
+        font-size: calc(16px + (21 - 16) * ((100vw - 320px) / (1920 - 320)));
+        border: 1px solid #222;
+        outline: none;
+        text-align: center;
+    }
+
+    .btn {
+        padding: calc(10px + (15 - 10) * ((100vw - 320px) / (1920 - 320))) calc(15px + (25 - 15) * ((100vw - 320px) / (1920 - 320)));
+        font-size: calc(16px + (21 - 16) * ((100vw - 320px) / (1920 - 320)));
+        border: 1px solid #222;
+        background: #222;
+        color: #fff;
+        @include primary-font();
+        cursor: pointer;
+    }
+}
+
+/* Single Product Section
+------------------------- */
+.single-product-section {
+    width: 100%;
+    padding: calc(30px + (80 - 30) * ((100vw - 320px) / (1920 - 320))) 5%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: calc(30px + (80 - 30) * ((100vw - 320px) / (1920 - 320)));
+
+    @include phone-767 {
+        grid-template-columns: 1fr;
+    }
+
+    .left-col {
+        min-height: calc(200px + (250 - 200) * ((100vw - 320px) / (1920 - 320)));
+    }
+
+    .right-col {
+        .title {
+            font-size: calc(20px + (45 - 20) * ((100vw - 320px) / (1920 - 320)));
+        }
+
+        .text-block {
+            padding: calc(20px + (50 - 20) * ((100vw - 320px) / (1920 - 320))) 0px;
+
+            .text {
+                font-size: calc(16px + (21 - 16) * ((100vw - 320px) / (1920 - 320)));
+
+                b {
+                    font-weight: 600;
+                    margin-left: calc(10px + (15 - 10) * ((100vw - 320px) / (1920 - 320)));
+                }
+
+                &:not(:last-child) {
+                    margin-bottom: calc(10px + (15 - 10) * ((100vw - 320px) / (1920 - 320)));
+                }
+
+                .input {
+                    padding: 5px;
+                    border: 1px solid #222;
+                    outline: none;
+                }
+            }
+        }
+
+        .btn-block {
+            .btn {
+                padding: calc(10px + (15 - 10) * ((100vw - 320px) / (1920 - 320))) calc(15px + (25 - 15) * ((100vw - 320px) / (1920 - 320)));
+                font-size: calc(16px + (21 - 16) * ((100vw - 320px) / (1920 - 320)));
+                background: #222;
+                border: 1px solid #222;
+                color: #fff;
+
+                &.reverse-btn {
+                    background: #fff;
+                    color: #222;
+                    margin-left: calc(10px + (15 - 10) * ((100vw - 320px) / (1920 - 320)));
+                }
+            }
+        }
+    }
+}
+
+.product-tab {
+    width: 100%;
+    padding: 0px 5%;
+
+    .title-block {
+        display: flex;
+        gap: calc(20px + (35 - 20) * ((100vw - 320px) / (1920 - 320)));
+        color: gray;
+
+        .title {
+            font-size: calc(20px + (35 - 20) * ((100vw - 320px) / (1920 - 320)));
+            cursor: pointer;
+            padding-bottom: 10px;
+            position: relative;
+            background: #fff;
+
+            &.active {
+                color: #222;
+
+                &::before {
+                    bottom: -15px;
+                    transition-delay: 0.5s;
+                }
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                width: 30px;
+                height: 30px;
+                background: #222;
+                bottom: 15px;
+                left: 50px;
+                transform: rotate(45deg);
+                z-index: -9;
+                transition: 0.5s;
+            }
+        }
+    }
+
+    .product-filter {
+        margin-top: calc(20px + (45 - 20) * ((100vw - 320px) / (1920 - 320)));
+        position: relative;
+        min-height: 100px;
+
+        .product-filter-block {
+            padding: calc(10px + (15 - 10) * ((100vw - 320px) / (1920 - 320)));
+            border: 1px solid #222;
+            position: absolute;
+            top: 30px;
+            left: 0;
+            opacity: 0;
+            transition: 0.5s;
+            width: 100%;
+            height: 100%;
+
+            .text-block {
+                display: grid;
+                gap: calc(10px + (15 - 10) * ((100vw - 320px) / (1920 - 320)));
+
+                .text {
+                    font-size: calc(16px + (21 - 16) * ((100vw - 320px) / (1920 - 320)));
+                }
+            }
+
+            &.active {
+                position: relative;
+                top: 0px;
+                opacity: 1;
+                transition-delay: 0.5s;
+            }
+        }
+    }
+}

@@ -1,0 +1,79 @@
+/* SMARTPHONE POTRAIT
+----------------------- */
+@mixin max-width-1023 {
+    @media screen and (max-width: 1023px) {
+        @content;
+    }
+}
+
+/* LARGE PHONE
+-------------- */
+@mixin phone-767 {
+    @media screen and (max-width: 767px) {
+        @content;
+    }
+}
+
+/* MEDIUM PHONE
+--------------- */
+@mixin phone-601 {
+    @media screen and (max-width: 601px) {
+        @content;
+    }
+}
+
+/* SMALL PHONE
+-------------- */
+@mixin phone-480 {
+    @media screen and (max-width: 480px) {
+        @content;
+    }
+}
+
+/* IPAD POTRAIT
+--------------- */
+@mixin iPad-pro-12-portrait {
+    @media only screen and (min-width: 1024px) and (orientation: portrait) {
+        @content;
+    }
+}
+
+/* MEDIUM DESKTOP
+----------------- */
+@mixin desktop-1025 {
+    @media screen and (min-width: 1024px) and (max-width: 1500px) {
+        @content;
+    }
+}
+
+/* IPAD/TABLET
+-------------- */
+@mixin tablet {
+    @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+        @content;
+    }
+}
+
+/* IPAD/TABLET POTRAIT
+---------------------- */
+@mixin iPad-portrait {
+    @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+        @content;
+    }
+}
+
+/* IPAD/TABLET LANDSCAPE
+------------------------ */
+@mixin iPad-landscape {
+    @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+        @content;
+    }
+}
+
+/* IPHONE
+--------- */
+@mixin iPhone {
+    @media only screen and (min-device-width: 320px) and (max-device-width: 720px) and (-webkit-device-pixel-ratio: 2) {
+        @content;
+    }
+}

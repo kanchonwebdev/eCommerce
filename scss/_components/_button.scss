@@ -1,0 +1,15 @@
+/* use by mixin
+=============== */
+@mixin primary-btn {}
+@mixin secondary-btn {}
+@mixin primary-btn-hover {}
+@mixin secondary-btn-hover {}
+
+/* use by class name
+==================== */
+.primary-btn{
+    @include primary-btn();
+}
+.secondary-btn{
+    @include secondary-btn();
+}

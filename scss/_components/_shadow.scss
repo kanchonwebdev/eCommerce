@@ -1,0 +1,13 @@
+/* use by mixin
+=============== */
+@mixin box-shadow{}
+@mixin text-shadow{}
+
+/* use by class name
+==================== */
+.box-shadow{
+    @include box-shadow();
+}
+.text-shadow{
+    @include text-shadow();
+}

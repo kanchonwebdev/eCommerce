@@ -1,0 +1,16 @@
+/* use by mixin
+=============== */
+@mixin primary-title{
+    font-size: calc(25px + (55 - 25) * ((100vw - 320px) / (1920 - 320)));
+    font-weight: 700;
+}
+@mixin secondary-title{}
+
+/* use by class name
+==================== */
+.primary-title{
+    @include primary-title();
+}
+.secondary-title{
+    @include secondary-title();
+}

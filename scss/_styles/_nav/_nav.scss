@@ -1,0 +1,124 @@
+/* Nav Container Style
+====================== */
+.nav-container{
+    @include secondary-font();
+    
+    /* Topbar Style
+    =============== */
+    .topbar{
+        width: 100%;
+        padding: calc(15px + (20 - 15) * ((100vw - 320px) / (1920 - 320))) 5%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @include phone-767{
+            flex-direction: column;
+        }
+
+        .left-col{
+            font-size: calc(16px + (18 - 16) * ((100vw - 320px) / (1920 - 320)));
+
+            @include phone-767{
+                text-align: center;
+            }
+        }
+
+        .right-col{
+            font-size: calc(16px + (18 - 16) * ((100vw - 320px) / (1920 - 320)));
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: flex-end;
+            gap: calc(8px + (10 - 8) * ((100vw - 320px) / (1920 - 320)));
+
+            @include phone-767{
+                flex-direction: row;
+                width: 100%;
+            }
+
+            .top-col{
+                display: flex;
+                align-items: center;gap: calc(10px + (15 - 10) * ((100vw - 320px) / (1920 - 320)));
+            }
+
+            .bottom-col{
+                a{
+                    &:first-child{
+                        margin-right: calc(10px + (15 - 10) * ((100vw - 320px) / (1920 - 320)));
+                    }
+                }
+            }
+            .top-block{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 5px;
+
+                .icon {
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+                }
+
+                @include phone-767{
+                    .text{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    /* Navbar Style
+    =============== */
+    .navbar{
+        padding: calc(15px + (20 - 15) * ((100vw - 320px) / (1920 - 320))) 5%;
+        padding-top: 0px;
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+
+        @include tablet{
+            display: none;
+        }
+
+        @include phone-767{
+            display: none;
+        }
+
+        .left-col{
+            .logo{
+                font-size: calc(20px + (55 - 20) * ((100vw - 320px) / (1920 - 320)));
+                font-weight: 700;
+            }
+        }
+
+        .middle-col{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .nav-menu{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: calc(15px + (25 - 15) * ((100vw - 320px) / (1920 - 320)));
+                font-size: calc(16px + (21 - 16) * ((100vw - 320px) / (1920 - 320)));
+            }
+        }
+
+        .right-col{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: calc(15px + (25 - 15) * ((100vw - 320px) / (1920 - 320)));
+            font-size: calc(16px + (21 - 16) * ((100vw - 320px) / (1920 - 320)));
+
+            .right-block{
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                gap: 5px;
+            }
+        }
+    }
+}

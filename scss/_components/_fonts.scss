@@ -1,0 +1,33 @@
+/* @font-face {
+    font-family: 'Moldern';
+    src: url("../fonts/MoldernRegular-MVR2J.ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Mukta&display=swap');
+
+/* use by mixin
+=============== */
+@mixin primary-font {
+    font-family: 'Marcellus', serif;
+    font-weight: 400;
+}
+
+@mixin secondary-font {
+    font-family: 'Mukta', serif;
+    font-weight: 400;
+}
+
+/* use by class name 
+==================== */
+.primary-font{
+    @include primary-font();
+}
+
+.secondary-font {
+    @include secondary-font();
+}

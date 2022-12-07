@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sunglass - Cart</title>
+    <meta name="description" content="" />
+    <link rel="alternate" href="" hreflang="en" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="" />
+    <!-- ./Open Graph / Facebook -->
+
+    <!-- CSS Files Section -->
+    <!--#include virtual="includes/css-bundle.h"-->
+    
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <!-- Navbar Section -->
+    <!--#include virtual="includes/nav.h"-->
+    <!-- Navbar Section END -->
+
+    <!-- Header Image Section -->
+    <div class="inner-header-section">
+        <div class="bg-img">
+            <img src="assets/images/02.jpg" alt="header-img" />
+        </div>
+        <div class="text-block">
+            <h1 class="title">
+                <a href="./">Home</a> <span>&rightarrow;</span>
+                <a href="shop">Shop</a> <span>&rightarrow;</span>
+                <a href="cart">Cart</a>
+            </h1>
+        </div>
+    </div>
+    <!-- Header Image Section END -->
+
+    <!-- Cart Block -->
+    <div class="cart-section">
+        <div class="title-block">
+            <div class="title">Product</div>
+            <div class="title">Price</div>
+            <div class="title">Quantity</div>
+            <div class="title">Total</div>
+            <div class="title">Action</div>
+        </div>
+        <form class="cart-block" method="post">
+            <div class="text">New Product</div>
+            <div class="price">&dollar;90</div>
+            <div class="quantity">
+                <input type="number" name="" placeholder="Quantity" id="">
+            </div>
+            <div class="total">&dollar;90 x 3</div>
+            <div class="btn-block">
+                <button class="btn btn-black">Remove</button>
+                <button class="btn">Update Cart</button>
+            </div>
+        </form>
+    </div>
+    <!-- Cart Block END-->
+
+    <!-- Pay Section -->
+    <div class="pay-section">
+        <div class="left-col">
+            <form action="" method="post" class="form-block">
+                <input type="text" name="" placeholder="Apply coupon code" id="">
+                <button type="submit" class="btn">Apply Coupon</button>
+            </form>
+            <div class="btn-block">
+                <a href="shop" class="btn">Continue Shopping</a>
+            </div>
+        </div>
+        <div class="right-col">
+            <div class="pay-block">
+                <div class="text">Total</div>
+                <div class="price">&dollar;320</div>
+            </div>
+            <div class="pay-block">
+                <div class="text">Delivery</div>
+                <div class="price">&dollar;20</div>
+            </div>
+            <div class="pay-block border-top">
+                <div class="text">Sub Total</div>
+                <div class="price">&dollar;340</div>
+            </div>
+            <div class="pay-block">
+                <a href="checkout" class="btn">Checkout Now</a>
+            </div>
+        </div>
+    </div>
+    <!-- Pay Section END -->
+
+    <!-- Footer Section -->
+    <!--#include virtual="includes/footer.h"-->
+    <!-- Footer Section END -->
+
+    <!-- Back to top -->
+    <!--#include virtual="includes/back-to-top.h"-->
+
+    <!-- JS Files -->
+    <!--#include virtual="includes/js-bundle.h"-->
+</body>
+
+</html>

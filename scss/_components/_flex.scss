@@ -1,0 +1,33 @@
+/* use by mixin
+=============== */
+@mixin flex {
+    display: flex;
+}
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@mixin grid {
+    display: grid;
+}
+@mixin grid-center {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+/* use by class name
+==================== */
+.flex{
+    @include flex();
+}
+.flex-center{
+    @include flex-center();
+}
+.grid{
+    @include grid();
+}
+.grid-center{
+    @include grid();
+}

@@ -1,0 +1,35 @@
+/* use by mixin 
+===============*/
+@mixin border-1 {
+    border: 1px solid #000;
+}
+@mixin border-2 {
+    border: 2px solid #000;
+}
+@mixin border-3 {
+    border: 1px solid #000;
+}
+@mixin border-4 {
+    border: 1px solid #000;
+}
+@mixin border-5 {
+    border: 1px solid #000;
+}
+
+/* use by class name
+==================== */
+.border-1{
+    @include border-1();
+}
+.border-2 {
+    @include border-2();
+}
+.border-3 {
+    @include border-3();
+}
+.border-4 {
+    @include border-4();
+}
+.border-5 {
+    @include border-5();
+}
