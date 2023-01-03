@@ -24,6 +24,10 @@ t1.to("#nav-overlay", 0.5, {
     "left": "0%"
 });
 
+t1.from("#nav-overlay .close", 0.5, {
+    "right": "100%"
+});
+
 t1.from("#nav-overlay .nav-menu .menu-link .nav-link", 0.5, {
     y: "100%",
     stagger: 0.05,
@@ -46,6 +50,11 @@ t1.reverse();
 HAMBURGER MENU
 ----------- */
 document.getElementById("ham-icon").addEventListener("click", function () {
+    t1.reversed(!t1.reversed());
+    this.classList.toggle('active');
+});
+
+document.querySelector(".close").addEventListener("click", function () {
     t1.reversed(!t1.reversed());
     this.classList.toggle('active');
 });
