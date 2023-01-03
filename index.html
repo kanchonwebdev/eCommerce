@@ -18,14 +18,138 @@
     <!-- ./Open Graph / Facebook -->
 
     <!-- CSS Files Section -->
-    <!--#include virtual="includes/css-bundle.h"-->
-    
     <link rel="stylesheet" href="css/main.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+
 </head>
 
 <body>
     <!-- Navbar Section -->
-    <!--#include virtual="includes/nav.h"-->
+    <div class="nav-container" id="nav-container">
+        <div class="topbar" id="topbar">
+            <div class="left-col">Shop up to <b>&dollar;300</b> and get <b>Coupon Code</b></div>
+            <div class="right-col">
+                <div class="top-col">
+                    <a href="tel:+00123456789">
+                        <span class="icon"><i class="ri-smartphone-line"></i></span>
+                        <span class="text">&plus;00 123 4567 89</span>
+                    </a>
+                    <a href="mailto:info@gmail.com">
+                        <span class="icon">
+                            <i class="ri-mail-line"></i>
+                        </span>
+                        <span class="text">info@gmail.com</span>
+                    </a>
+                </div>
+                <div class="bottom-col">
+                    <a href="#">
+                        <span class="icon">
+                            <i class="ri-shield-user-line"></i>
+                        </span>
+                        <span class="text">Login</span>
+                    </a>
+                    <a href="#">
+                        <span class="icon">
+                            <i class="ri-shield-user-line"></i>
+                        </span>
+                        <span class="text">Sign Up</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="navbar">
+            <div class="left-col">
+                <div class="logo">
+                    <a href="./">
+                        <img src="assets/images/logo.png" alt="nav-logo">
+                    </a>
+                </div>
+            </div>
+            <div class="middle-col">
+                <ul class="nav-menu">
+                    <li class="nav-link">
+                        <a href="./" class="menu-link">Home</a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="shop" class="menu-link">Shop</a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="about" class="menu-link">About us</a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="contact" class="menu-link">Contact us</a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#" class="menu-link">Pages</a>
+                        <ul>
+                            <li><a href="404.html">404</a></li>
+                            <li><a href="cart.html">Cart</a></li>
+                            <li><a href="wishlist.html">Wishlist</a></li>
+                            <li><a href="order-history.html">Order History</a></li>
+                            <li><a href="payment.html">Payment</a></li>
+                            <li><a href="single-product.html">Single Product</a></li>
+                            <li><a href="thank-you.html">Thank you</a></li>
+                            <li><a href="track-order.html">Track Order</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="right-col">
+                <div class="right-block">
+                    <i class="ri-shopping-cart-line"></i> <span class="text">Cartlist</span>
+                </div>
+                <div class="right-block">
+                    <i class="ri-shopping-bag-line"></i> <span class="text">Wishlist</span>
+                </div>
+                <div class="right-block">
+                    <div id="ham-icon">
+                        <div class="icon-bar"></div>
+                        <div class="icon-bar"></div>
+                        <div class="icon-bar"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="nav-overlay">
+        <ul class="nav-menu">
+            <li class="menu-link">
+                <a href="./" class="nav-link">Home</a>
+            </li>
+            <li class="menu-link">
+                <a href="shop.html" class="nav-link">Shop</a>
+            </li>
+            <li class="menu-link">
+                <a href="about.html" class="nav-link">About</a>
+            </li>
+            <li class="menu-link">
+                <a href="contact.html" class="nav-link">Contact</a>
+            </li>
+        </ul>
+
+        <div class="line"></div>
+
+        <div class="nav-address">
+            <div class="address-block">
+                <a href="#" class="nav-menu" title="address">
+                    <span class="svg-icon">
+                        <i class="ri-map-pin-line"></i>
+                    </span>
+                    <span class="text">59 Street, Newyork City, Rose Town, 05 Rive House</span>
+                </a>
+            </div>
+
+            <div class="address-block">
+                <a href="#" class="nav-menu">
+                    <span class="svg-icon">
+                        <i class="ri-phone-line"></i>
+                    </span>
+                    <span class="text">&plus;00 123 4567 89</span>
+                </a>
+            </div>
+        </div>
+    </div>
     <!-- Navbar Section END -->
 
     <!-- Header Section -->
@@ -79,201 +203,9 @@
             <span>New</span>
         </div>
         <div class="product-wrapper">
-            <div class="product-block">
-                <div class="top-section">
-                    <div class="left-col">12&percnt; OFF</div>
-                    <div class="right-col">Wishlist</div>
-                </div>
-                <div class="bottom-section">
-                    <div class="img-block">
-                        <img src="assets/images/4.png" alt="product-img">
-                    </div>
-                    <div class="price">&dollar;90</div>
-                    <div class="btn-block">
-                        <a href="#" class="btn">Add Cart</a>
-                        <a href="#" class="btn">Add Wishlist</a>
-                    </div>
-                </div>
-            </div>
-            <div class="product-block">
-                <div class="top-section">
-                    <div class="left-col">12&percnt; OFF</div>
-                    <div class="right-col">Wishlist</div>
-                </div>
-                <div class="bottom-section">
-                    <div class="img-block">
-                        <img src="assets/images/4.png" alt="product-img">
-                    </div>
-                    <div class="price">&dollar;90</div>
-                    <div class="btn-block">
-                        <a href="#" class="btn">Add Cart</a>
-                        <a href="#" class="btn">Add Wishlist</a>
-                    </div>
-                </div>
-            </div>
-            <div class="product-block">
-                <div class="top-section">
-                    <div class="left-col">12&percnt; OFF</div>
-                    <div class="right-col">Wishlist</div>
-                </div>
-                <div class="bottom-section">
-                    <div class="img-block">
-                        <img src="assets/images/4.png" alt="product-img">
-                    </div>
-                    <div class="price">&dollar;90</div>
-                    <div class="btn-block">
-                        <a href="#" class="btn">Add Cart</a>
-                        <a href="#" class="btn">Add Wishlist</a>
-                    </div>
-                </div>
-            </div>
-            <div class="product-block">
-                <div class="top-section">
-                    <div class="left-col">12&percnt; OFF</div>
-                    <div class="right-col">Wishlist</div>
-                </div>
-                <div class="bottom-section">
-                    <div class="img-block">
-                        <img src="assets/images/4.png" alt="product-img">
-                    </div>
-                    <div class="price">&dollar;90</div>
-                    <div class="btn-block">
-                        <a href="#" class="btn">Add Cart</a>
-                        <a href="#" class="btn">Add Wishlist</a>
-                    </div>
-                </div>
-            </div>
-            <div class="product-block">
-                <div class="top-section">
-                    <div class="left-col">12&percnt; OFF</div>
-                    <div class="right-col">Wishlist</div>
-                </div>
-                <div class="bottom-section">
-                    <div class="img-block">
-                        <img src="assets/images/4.png" alt="product-img">
-                    </div>
-                    <div class="price">&dollar;90</div>
-                    <div class="btn-block">
-                        <a href="#" class="btn">Add Cart</a>
-                        <a href="#" class="btn">Add Wishlist</a>
-                    </div>
-                </div>
-            </div>
-            <div class="product-block">
-                <div class="top-section">
-                    <div class="left-col">12&percnt; OFF</div>
-                    <div class="right-col">Wishlist</div>
-                </div>
-                <div class="bottom-section">
-                    <div class="img-block">
-                        <img src="assets/images/4.png" alt="product-img">
-                    </div>
-                    <div class="price">&dollar;90</div>
-                    <div class="btn-block">
-                        <a href="#" class="btn">Add Cart</a>
-                        <a href="#" class="btn">Add Wishlist</a>
-                    </div>
-                </div>
-            </div>
-            <div class="product-block">
-                <div class="top-section">
-                    <div class="left-col">12&percnt; OFF</div>
-                    <div class="right-col">Wishlist</div>
-                </div>
-                <div class="bottom-section">
-                    <div class="img-block">
-                        <img src="assets/images/4.png" alt="product-img">
-                    </div>
-                    <div class="price">&dollar;90</div>
-                    <div class="btn-block">
-                        <a href="#" class="btn">Add Cart</a>
-                        <a href="#" class="btn">Add Wishlist</a>
-                    </div>
-                </div>
-            </div>
-            <div class="product-block">
-                <div class="top-section">
-                    <div class="left-col">12&percnt; OFF</div>
-                    <div class="right-col">Wishlist</div>
-                </div>
-                <div class="bottom-section">
-                    <div class="img-block">
-                        <img src="assets/images/4.png" alt="product-img">
-                    </div>
-                    <div class="price">&dollar;90</div>
-                    <div class="btn-block">
-                        <a href="#" class="btn">Add Cart</a>
-                        <a href="#" class="btn">Add Wishlist</a>
-                    </div>
-                </div>
-            </div>
-            <div class="product-block">
-                <div class="top-section">
-                    <div class="left-col">12&percnt; OFF</div>
-                    <div class="right-col">Wishlist</div>
-                </div>
-                <div class="bottom-section">
-                    <div class="img-block">
-                        <img src="assets/images/4.png" alt="product-img">
-                    </div>
-                    <div class="price">&dollar;90</div>
-                    <div class="btn-block">
-                        <a href="#" class="btn">Add Cart</a>
-                        <a href="#" class="btn">Add Wishlist</a>
-                    </div>
-                </div>
-            </div>
-            <div class="product-block">
-                <div class="top-section">
-                    <div class="left-col">12&percnt; OFF</div>
-                    <div class="right-col">Wishlist</div>
-                </div>
-                <div class="bottom-section">
-                    <div class="img-block">
-                        <img src="assets/images/4.png" alt="product-img">
-                    </div>
-                    <div class="price">&dollar;90</div>
-                    <div class="btn-block">
-                        <a href="#" class="btn">Add Cart</a>
-                        <a href="#" class="btn">Add Wishlist</a>
-                    </div>
-                </div>
-            </div>
-            <div class="product-block">
-                <div class="top-section">
-                    <div class="left-col">12&percnt; OFF</div>
-                    <div class="right-col">Wishlist</div>
-                </div>
-                <div class="bottom-section">
-                    <div class="img-block">
-                        <img src="assets/images/4.png" alt="product-img">
-                    </div>
-                    <div class="price">&dollar;90</div>
-                    <div class="btn-block">
-                        <a href="#" class="btn">Add Cart</a>
-                        <a href="#" class="btn">Add Wishlist</a>
-                    </div>
-                </div>
-            </div>
-            <div class="product-block">
-                <div class="top-section">
-                    <div class="left-col">12&percnt; OFF</div>
-                    <div class="right-col">Wishlist</div>
-                </div>
-                <div class="bottom-section">
-                    <div class="img-block">
-                        <img src="assets/images/4.png" alt="product-img">
-                    </div>
-                    <div class="price">&dollar;90</div>
-                    <div class="btn-block">
-                        <a href="#" class="btn">Add Cart</a>
-                        <a href="#" class="btn">Add Wishlist</a>
-                    </div>
-                </div>
-            </div>
         </div>
-        <div class="load-btn-block">
-            <a href="#" class="btn">Load More</a>
+        <div class="load-btn-block" id="loadBtn">
+            <div class="btn" onclick="showProduct()">Load More</div>
         </div>
     </div>
     <!-- Product Section END -->
@@ -505,14 +437,187 @@
     <!-- Choose Section END -->
 
     <!-- Footer Section -->
-    <!--#include virtual="includes/footer.h"-->
+    <div class="footer">
+        <div class="footer-block">
+            <div class="title">Information</div>
+
+            <ul class="menu-block">
+                <li class="menu-link">
+                    <a href="#" class="nav-menu">About us</a>
+                </li>
+                <li class="menu-link">
+                    <a href="#" class="nav-menu">Contact us</a>
+                </li>
+                <li class="menu-link">
+                    <a href="#" class="nav-menu">Selling tips</a>
+                </li>
+            </ul>
+        </div>
+        <div class="footer-block">
+            <div class="title">My Account</div>
+
+            <ul class="menu-block">
+                <li class="menu-link">
+                    <a href="#" class="nav-menu">Login</a>
+                </li>
+                <li class="menu-link">
+                    <a href="#" class="nav-menu">Register</a>
+                </li>
+                <li class="menu-link">
+                    <a href="#" class="nav-menu">Order history</a>
+                </li>
+                <li class="menu-link">
+                    <a href="#" class="nav-menu">Track order</a>
+                </li>
+            </ul>
+        </div>
+        <div class="footer-block">
+            <div class="title">Help & Support</div>
+
+            <ul class="menu-block">
+                <li class="menu-link">
+                    <a href="#" class="nav-menu">How to shop</a>
+                </li>
+                <li class="menu-link">
+                    <a href="#" class="nav-menu">Payment</a>
+                </li>
+                <li class="menu-link">
+                    <a href="#" class="nav-menu">Return</a>
+                </li>
+                <li class="menu-link">
+                    <a href="#" class="nav-menu">Delivery</a>
+                </li>
+                <li class="menu-link">
+                    <a href="#" class="nav-menu">Privacy & cookie policy</a>
+                </li>
+            </ul>
+        </div>
+        <div class="footer-block">
+            <div class="title"><span>Sun</span>Glass</div>
+
+            <ul class="menu-block">
+                <li class="menu-link">
+                    <a href="#" class="nav-menu" title="address">
+                        <span class="svg-icon">
+                            <i class="ri-map-pin-line"></i>
+                        </span>
+                        <span class="text">59 Street, Newyork City, Rose Town, 05 Rive House</span>
+                    </a>
+                </li>
+                <li class="menu-link" title="number">
+                    <a href="#" class="nav-menu">
+                        <span class="svg-icon">
+                            <i class="ri-phone-line"></i>
+                        </span>
+                        <span class="text">&plus;00 123 4567 89</span>
+                    </a>
+                </li>
+                <li class="menu-link" title="email">
+                    <a href="#" class="nav-menu">
+                        <span class="svg-icon">
+                            <i class="ri-mail-line"></i>
+                        </span>
+                        <span class="text">info@gmail.com</span>
+                    </a>
+                </li>
+            </ul>
+
+            <div class="pay-wrapper">
+                <div class="pay-block">
+                    <a href="#"><img src="assets/images/11.png" alt="visa-card"></a>
+                </div>
+                <div class="pay-block">
+                    <a href="#"><img src="assets/images/12.png" alt="master-card"></a>
+                </div>
+                <div class="pay-block">
+                    <a href="#"><img src="assets/images/13.png" alt="american-express"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p class="text">&copy; 2022 SunGlass. All Rights Reserved.</p>
+    </div>
     <!-- Footer Section END -->
 
     <!-- Back to top -->
-    <!--#include virtual="includes/back-to-top.h"-->
+    <div id="progress">
+        <span id="progress-value">&#x1F815;</span>
+    </div>
 
-    <!-- JS Files -->
-    <!--#include virtual="includes/js-bundle.h"-->
+    <!-- LOADER -->
+    <div class="loader">
+        <div></div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <script>
+        let http = new XMLHttpRequest();
+        let products;
+        let productContainer = [];
+        let counter = 0;
+        let output = "";
+
+        http.open('get', 'products.json', true);
+        http.send();
+
+
+        http.onload = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                products = JSON.parse(this.responseText);
+
+                for (let i = 0; i < products.length; i += 8) {
+                    productContainer.push(products.slice(i, i + 8));
+                }
+
+                showProduct();
+            }
+        }
+
+
+        function showProduct() {
+            for (let item = 0; item < productContainer[counter].length; item++) {
+                output += `
+                    <div class="product-block">
+                        <div class="top-section">
+                            <div class="left-col">${products[item].discount}&percnt; OFF</div>
+                            <div class="right-col">Wishlist</div>
+                        </div>
+                        <div class="bottom-section">
+                            <div class="img-block">
+                                <img src="assets/images/4.png" alt="product-img">
+                            </div>
+                            <div class="price">&dollar;${products[item].price}</div>
+                            <div class="btn-block">
+                                <a href="#" class="btn">Add Cart</a>
+                                <a href="#" class="btn">Add Wishlist</a>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }
+
+            document.querySelector(".product-wrapper").innerHTML = output;
+
+            counter++;
+            if (counter == productContainer.length) {
+                counter = productContainer.length;
+                document.getElementById("loadBtn").remove();
+            }
+        }
+    </script>
+
+    <!-----------
+    LOADER SCRIPT
+    ------------>
+    <script>
+        $(window).on('load', function () {
+            $(".loader").fadeOut(1000);
+        });
+    </script>
 </body>
 
 </html>

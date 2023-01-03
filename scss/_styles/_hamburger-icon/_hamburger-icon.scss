@@ -1,0 +1,41 @@
+#ham-icon {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    position: relative;
+    z-index: 10;
+
+    @include max-width-1023{
+        display: flex;
+    }
+
+    .icon-bar {
+        width: 30px;
+        height: 2px;
+        background: #222;
+        transition: 0.5s;
+    }
+
+    &.active {
+        .icon-bar {
+            background: #fff;
+            &.icon-bar:nth-child(1) {
+                transform: rotate(45deg);
+                top: 6px;
+                position: relative;
+            }
+
+            &:nth-child(2) {
+                opacity: 0;
+                transform: translateX(20px);
+            }
+
+            &.icon-bar:nth-child(3) {
+                transform: rotate(-45deg);
+                bottom: 6px;
+                position: relative;
+            }
+        }
+    }
+}

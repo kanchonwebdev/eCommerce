@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sunglass - Homepage</title>
+    <title>Sunglass - 404</title>
     <meta name="description" content="" />
     <link rel="alternate" href="" hreflang="en" />
 
@@ -16,6 +16,7 @@
     <meta property="og:description" content="" />
     <meta property="og:image" content="" />
     <!-- ./Open Graph / Facebook -->
+
     <link rel="stylesheet" href="css/main.css">
 </head>
 
@@ -28,11 +29,28 @@
             <span class="text">4</span>
         </h1>
 
+        <p class="text">Page not found</p>
+
         <div class="btn-block">
             <a href="./" class="btn">Go Home</a>
         </div>
     </div>
     <!-- 404 Section END -->
+
+    <!-- LOADER -->
+    <div class="loader">
+        <div></div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <!-----------
+    LOADER SCRIPT
+    ------------>
+    <script>
+        $(window).on('load', function () {
+            $(".loader").fadeOut(1000);
+        });
+    </script>
 </body>
 
 </html>

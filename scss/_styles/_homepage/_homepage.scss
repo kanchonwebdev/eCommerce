@@ -333,7 +333,11 @@
 
             &:hover {
                 .bottom-section {
-                    transform: translateY(0);
+                    transform: translateY(-20px);
+
+                    @include phone-767{
+                        transform: translateY(0px);
+                    }
                 }
             }
         }
@@ -720,5 +724,24 @@
                 }
             }
         }
+    }
+}
+
+/* About Section Style
+---------------------- */
+.about-section{
+    width: 100%;
+    padding: 0px 5%;
+    margin: calc(30px + (80 - 30) * ((100vw - 320px) / (1920 - 320))) auto;
+
+    .title{
+        font-size: calc(25px + (65 - 25) * ((100vw - 320px) / (1920 - 320)));
+        text-align: center;
+        margin-bottom: calc(30px + (80 - 30) * ((100vw - 320px) / (1920 - 320)));
+    }
+
+    .text{
+        font-size: calc(16px + (21 - 16) * ((100vw - 320px) / (1920 - 320)));
+        margin-bottom: 25px;
     }
 }
